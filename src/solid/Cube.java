@@ -1,6 +1,6 @@
 package solid;
 
-public class Cube {
+public class Cube implements Shape{
 
     private final int a;
 
@@ -10,5 +10,10 @@ public class Cube {
 
     public int getA() {
         return a;
+    }
+
+    @Override
+    public double area() {
+        return Math.pow(this.getA(),2) * 6;
     }
 }

@@ -1,6 +1,6 @@
 package solid;
 
-public class Circle {
+public class Circle implements Shape{
 
     private final int radius;
 
@@ -8,4 +8,8 @@ public class Circle {
 
     public int getRadius(){return radius;}
 
+    @Override
+    public double area() {
+        return Math.PI * Math.pow(this.getRadius(), 2);
+    }
 }
