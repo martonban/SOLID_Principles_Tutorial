@@ -10,8 +10,7 @@ public class Main {
         NoShape noShape = new NoShape();
         List<Shape> shapes = List.of(
                 circle,
-                square,
-                noShape);
+                square);
         int sum = areaCalculator.sum(shapes);
         ShapesPrinter printer = new ShapesPrinter();
         System.out.println(printer.csv(sum));
