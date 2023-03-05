@@ -16,4 +16,9 @@ public class Cube implements Shape{
     public double area() {
         return Math.pow(this.getA(),2) * 6;
     }
+
+    @Override
+    public double volume() {
+        return Math.pow(this.getA(),3);
+    }
 }
