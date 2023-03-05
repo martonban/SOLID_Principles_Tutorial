@@ -1,6 +1,6 @@
 package solid;
 
-public class Cube implements Shape{
+public class Cube implements Shape, ThreeDimensionalShape{
 
     private final int a;
 
