@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        AreaCalculator areaCalculator = new AreaCalculator();
+        IAreaCalculator areaCalculator = new AreaCalculator();
         Circle circle = new Circle(10);
         Square square = new Square(10);
         NoShape noShape = new NoShape();
@@ -12,9 +12,9 @@ public class Main {
                 circle,
                 square);
         int sum = areaCalculator.sum(shapes);
-        ShapesPrinter printer = new ShapesPrinter();
-        System.out.println(printer.csv(sum));
-        System.out.println(printer.json(sum));
+        ShapesPrinter printer = new ShapesPrinter(areaCalculator);
+        System.out.println(printer.csv(shapes));
+        System.out.println(printer.json(shapes));
 
     }
 }
